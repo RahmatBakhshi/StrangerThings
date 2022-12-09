@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Link, Route, Routes, Outlet, BrowserRouter } from 'react-router-dom';
-import Register from "./Login";
+import Register from "./Register";
 
 
 import "./Header.css";
@@ -25,11 +25,11 @@ const Header = () => {
 }
 
 const ChangePage = () => {
-            <Routes>
-                <Route path="/posts" element={<AllPosts />}></Route>
-                <Route path="/profile" element={<Profile />}></Route>
-                <Route path="/login" element={<Register />}></Route>
-            </Routes>
+    <Routes>
+        <Route path="/posts" element={<AllPosts />}></Route>
+        <Route path="/profile" element={<Profile />}></Route>
+        <Route path="/login" element={<Register />}></Route>
+    </Routes>
 
 }
 
