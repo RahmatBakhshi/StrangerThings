@@ -6,12 +6,20 @@ import AllPosts from "./AllPosts";
 
 
 
+// function LogoutButton() {
+//     const handleLogout = () => {
+//       sessionStorage.clear();
+//       window.location = '/login';
 //     };
-//     return(
-//         <button onClick={handleLoutgout}> Logout
-//         </button>
-//     )
-// }
+
+//     return (
+//       <button type="submit" className="logout-button" onClick={handleLogout}>
+//         Logout
+//       </button>
+//     );
+//   }
+
+
 const Header = () => {
 
     return (

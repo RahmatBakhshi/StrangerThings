@@ -32,9 +32,9 @@ const CreateNewPost = ({ posts, setPosts }) => {
                 const data = await result.data
                 console.log("Show me result", result);
                 // console.log("Show me data", data.posts);
-                const abc = [...posts, data]
+                // const abc = [...posts, data]
                 // setPosts([...posts, data]);
-                console.log("new data", abc)
+                // console.log("new data", abc)
                 navigate('/');
             }
             }>
@@ -72,4 +72,4 @@ const CreateNewPost = ({ posts, setPosts }) => {
 
 }
 
-export default CreateNewPost; 
+export default CreateNewPost;
