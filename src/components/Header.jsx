@@ -23,9 +23,13 @@ const Header = () => {
         <div className="header">
             <h3>Stranger's Things</h3>
             <div className="navbar">
-                <Link to={'/posts'} className="nav-links">Posts</Link>
+                <Link to={'/'} className="nav-links">Posts</Link>
                 <Link to={'/profile'} className="nav-links">Profile</Link>
+
                 <Link to={'/login'} className="nav-links">Login</Link>
+                <Link to={'/'} className="nav-links">Logout</Link>
+                <Link to={'/newpost'} className="nav-links">New Posts</Link>
+            </div>
                 </div>
 
 
@@ -34,14 +38,7 @@ const Header = () => {
     );
 }
 
-const ChangePage = () => {
-    <Routes>
-        <Route path="/posts" element={<AllPosts />}></Route>
-        <Route path="/profile" element={<Profile />}></Route>
-        <Route path="/login" element={<Register />}></Route>
-    </Routes>
 
-}
 
 
 export default Header;
