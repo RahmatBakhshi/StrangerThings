@@ -2,11 +2,21 @@ import React, { useState, useEffect } from "react";
 import { Link, Route, Routes, Outlet, BrowserRouter } from 'react-router-dom';
 import Register from "./Register";
 
-
 import "./Header.css";
 import AllPosts from "./AllPosts";
 
 
+function LogoutButton(){
+    const handleLogout = () =>{
+        sessionStorage.clear();
+        window.location = '/login';
+
+    };
+    return(
+        <button onClick={handleLoutgout}> Logout
+        </button>
+    )
+}
 const Header = () => {
 
     return (
