@@ -6,17 +6,17 @@ import "./Header.css";
 import AllPosts from "./AllPosts";
 
 
-function LogoutButton(){
-    const handleLogout = () =>{
-        sessionStorage.clear();
-        window.location = '/login';
+// function LogoutButton(){
+//     const handleLogout = () =>{
+//         sessionStorage.clear();
+//         window.location = '/login';
 
-    };
-    return(
-        <button onClick={handleLoutgout}> Logout
-        </button>
-    )
-}
+//     };
+//     return(
+//         <button onClick={handleLoutgout}> Logout
+//         </button>
+//     )
+// }
 const Header = () => {
 
     return (
@@ -33,7 +33,6 @@ const Header = () => {
                 </div>
 
 
-        </div>
 
     );
 }
