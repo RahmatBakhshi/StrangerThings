@@ -3,14 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import { registerUser } from "../api/auth";
 import { fetchMe } from "../api/auth";
 import "./Register.css"
-
 const Register = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [token, setToken] = useState(localStorage.getItem("token"));
     const [user, setUser] = useState([]);
     const navigate = useNavigate();
-
     useEffect(() => {
         const getMe = async () => {
             const data = await fetchMe(token);
@@ -42,6 +40,4 @@ const Register = () => {
         </>
     );
 }
-
-
 export default Register;

@@ -7,74 +7,22 @@ import { getPosts } from "./api/api";
 import Register from "./components/Register";
 import CreateNewPost from "./components/NewPost";
 import Login from "./components/Login";
-import SearchForm from "./components/Search"
-
-
-
-
-// const App = () => {
-
-//   const [posts, setPosts] = useState([]);
-
-
-
-//   useEffect(() => {
-//     getPosts(setPosts);
-//     fetch('/posts')
-//       .then(response => response.json())
-//       .then(data => setPosts(data))
-//       .catch(error => console.log(error));
-//   }, [])
-
 const App = () => {
   const [posts, setPosts] = useState([]);
-
+  const [postId, setPostId] = useState(null);
   useEffect(() => {
     getPosts(setPosts);
-  }, []);
-
-  // return (
-  //   <div>
-  //     {posts.length === 0 && (
-  //       <p>Loading posts...</p>
-  //     )}
-  //     {posts.length > 0 && (
-  //       <>
-  //         <SearchForm posts={posts} setPosts={setPosts} />
-  //         {posts.map(post => (
-  //           <div key={post.title}>
-  //             <h1>{post.title}</h1>
-  //             <p>{post.description}</p>
-  //           </div>
-  //         ))}
-  //       </>
-  //     )}
-  //   </div>
-  // );
-
-
-
-
-
+  }, [])
   // console.log("App Page Api ", posts)
-
   return (
     <>
-      {/* <Header />
-      <div>
-      <div>
-      <SearchForm posts={posts} setPosts={setPosts} />
-      {posts.map(post => (
-        <div key={post.title}>
-          <h1>{post.title}</h1>
-          <p>{post.description}</p>
-        </div>
-      ))}
-    </div> */}
+      <Header />
+      <div className="App">
         {/* <CreateNewPost />
         <Login />
         <Register />
         <AllPosts allPosts={posts} /> */}
+        {/* <SearchBar placeholder="What are you looking for?"/> */}
         <Routes>
           <Route exact path="/" element={<AllPosts allPosts={posts} />}></Route>
           {/* <Route path="/profile" element={<Profile />}></Route> */}
@@ -82,23 +30,10 @@ const App = () => {
           <Route path="/newpost" element={<CreateNewPost allPosts={posts}/>}></Route>
           <Route path="/register" element={<Register />}></Route>
         </Routes>
-
       </div>
-
-
-
     </>
-
   );
-
-
-      }
-
-
+}
 export default App;
-
 /* - This exports to main.jsx. Lots of functionality to go here. useEffects, useStates, call components.
-
-
-
 */
